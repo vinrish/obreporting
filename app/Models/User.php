@@ -17,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'firstname', 'lastname', 'username', 'email', 'password', 'phone', 'statut', 'avatar', 'role_id','is_all_warehouses'
+        'firstname', 'lastname', 'username', 'email', 'password', 'phone', 'statut', 'avatar', 'role_id','is_all_branches'
     ];
 
     /**
@@ -38,7 +38,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'role_id' => 'integer',
         'statut' => 'integer',
-        'is_all_warehouses' => 'integer',
+        'is_all_branches' => 'integer',
     ];
 
     public function oauthAccessToken()

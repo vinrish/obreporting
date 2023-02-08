@@ -87,7 +87,7 @@ class UserController extends BaseController
         $helpers = new helpers();
         $user['avatar'] = Auth::user()->avatar;
         $user['username'] = Auth::user()->username;
-        $user['currency'] = $helpers->Get_Currency();
+        // $user['currency'] = $helpers->Get_Currency();
         $user['logo'] = Setting::first()->logo;
         $user['default_language'] = Setting::first()->default_language;
         $user['footer'] = Setting::first()->footer;

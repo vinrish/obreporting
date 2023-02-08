@@ -15,8 +15,8 @@ class AddForeignKeysToObReportsTable extends Migration
     {
         Schema::table('ob_reports', function (Blueprint $table) {
             // $table->foreign('client_id', 'client_id _ob_report')->references('id')->on('clients')->onUpdate('RESTRICT')->onDelete('RESTRICT');
-			$table->foreign('user_id', 'user_id_ob_report')->references('id')->on('users')->onUpdate('RESTRICT')->onDelete('RESTRICT');
-			$table->foreign('branch_id', 'branch_id_ob_report')->references('id')->on('branches')->onUpdate('RESTRICT')->onDelete('RESTRICT');
+			// $table->foreign('user_id', 'user_id_ob_report')->references('id')->on('users')->onUpdate('RESTRICT')->onDelete('RESTRICT');
+			// $table->foreign('branch_id', 'branch_id_ob_report')->references('id')->on('branches')->onUpdate('RESTRICT')->onDelete('RESTRICT');
         });
     }
 
@@ -29,8 +29,8 @@ class AddForeignKeysToObReportsTable extends Migration
     {
         Schema::table('ob_reports', function (Blueprint $table) {
             // $table->dropForeign('client_id _ob_report');
-			$table->dropForeign('user_id_ob_report');
-			$table->dropForeign('branch_id_ob_report');
+			// $table->dropForeign('user_id_ob_report');
+			// $table->dropForeign('branch_id_ob_report');
         });
     }
 }

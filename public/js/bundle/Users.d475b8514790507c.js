@@ -1,9 +1,9 @@
-(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_src_views_app_pages_obreport_index_obreport_vue"],{
+(self["webpackChunk"] = self["webpackChunk"] || []).push([["Users"],{
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/src/views/app/pages/obreport/index_obreport.vue?vue&type=script&lang=js&":
-/*!************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/src/views/app/pages/obreport/index_obreport.vue?vue&type=script&lang=js& ***!
-  \************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/src/views/app/pages/people/users.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/src/views/app/pages/people/users.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -18,6 +18,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jspdf_autotable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jspdf-autotable */ "./node_modules/jspdf-autotable/dist/jspdf.plugin.autotable.js");
 /* harmony import */ var jspdf_autotable__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jspdf_autotable__WEBPACK_IMPORTED_MODULE_2__);
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return exports; }; var exports = {}, Op = Object.prototype, hasOwn = Op.hasOwnProperty, defineProperty = Object.defineProperty || function (obj, key, desc) { obj[key] = desc.value; }, $Symbol = "function" == typeof Symbol ? Symbol : {}, iteratorSymbol = $Symbol.iterator || "@@iterator", asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator", toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag"; function define(obj, key, value) { return Object.defineProperty(obj, key, { value: value, enumerable: !0, configurable: !0, writable: !0 }), obj[key]; } try { define({}, ""); } catch (err) { define = function define(obj, key, value) { return obj[key] = value; }; } function wrap(innerFn, outerFn, self, tryLocsList) { var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator, generator = Object.create(protoGenerator.prototype), context = new Context(tryLocsList || []); return defineProperty(generator, "_invoke", { value: makeInvokeMethod(innerFn, self, context) }), generator; } function tryCatch(fn, obj, arg) { try { return { type: "normal", arg: fn.call(obj, arg) }; } catch (err) { return { type: "throw", arg: err }; } } exports.wrap = wrap; var ContinueSentinel = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var IteratorPrototype = {}; define(IteratorPrototype, iteratorSymbol, function () { return this; }); var getProto = Object.getPrototypeOf, NativeIteratorPrototype = getProto && getProto(getProto(values([]))); NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype); var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype); function defineIteratorMethods(prototype) { ["next", "throw", "return"].forEach(function (method) { define(prototype, method, function (arg) { return this._invoke(method, arg); }); }); } function AsyncIterator(generator, PromiseImpl) { function invoke(method, arg, resolve, reject) { var record = tryCatch(generator[method], generator, arg); if ("throw" !== record.type) { var result = record.arg, value = result.value; return value && "object" == _typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) { invoke("next", value, resolve, reject); }, function (err) { invoke("throw", err, resolve, reject); }) : PromiseImpl.resolve(value).then(function (unwrapped) { result.value = unwrapped, resolve(result); }, function (error) { return invoke("throw", error, resolve, reject); }); } reject(record.arg); } var previousPromise; defineProperty(this, "_invoke", { value: function value(method, arg) { function callInvokeWithMethodAndArg() { return new PromiseImpl(function (resolve, reject) { invoke(method, arg, resolve, reject); }); } return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(innerFn, self, context) { var state = "suspendedStart"; return function (method, arg) { if ("executing" === state) throw new Error("Generator is already running"); if ("completed" === state) { if ("throw" === method) throw arg; return doneResult(); } for (context.method = method, context.arg = arg;;) { var delegate = context.delegate; if (delegate) { var delegateResult = maybeInvokeDelegate(delegate, context); if (delegateResult) { if (delegateResult === ContinueSentinel) continue; return delegateResult; } } if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) { if ("suspendedStart" === state) throw state = "completed", context.arg; context.dispatchException(context.arg); } else "return" === context.method && context.abrupt("return", context.arg); state = "executing"; var record = tryCatch(innerFn, self, context); if ("normal" === record.type) { if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue; return { value: record.arg, done: context.done }; } "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg); } }; } function maybeInvokeDelegate(delegate, context) { var methodName = context.method, method = delegate.iterator[methodName]; if (undefined === method) return context.delegate = null, "throw" === methodName && delegate.iterator["return"] && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method) || "return" !== methodName && (context.method = "throw", context.arg = new TypeError("The iterator does not provide a '" + methodName + "' method")), ContinueSentinel; var record = tryCatch(method, delegate.iterator, context.arg); if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel; var info = record.arg; return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel); } function pushTryEntry(locs) { var entry = { tryLoc: locs[0] }; 1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry); } function resetTryEntry(entry) { var record = entry.completion || {}; record.type = "normal", delete record.arg, entry.completion = record; } function Context(tryLocsList) { this.tryEntries = [{ tryLoc: "root" }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0); } function values(iterable) { if (iterable) { var iteratorMethod = iterable[iteratorSymbol]; if (iteratorMethod) return iteratorMethod.call(iterable); if ("function" == typeof iterable.next) return iterable; if (!isNaN(iterable.length)) { var i = -1, next = function next() { for (; ++i < iterable.length;) if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next; return next.value = undefined, next.done = !0, next; }; return next.next = next; } } return { next: doneResult }; } function doneResult() { return { value: undefined, done: !0 }; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, defineProperty(Gp, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), defineProperty(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) { var ctor = "function" == typeof genFun && genFun.constructor; return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name)); }, exports.mark = function (genFun) { return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun; }, exports.awrap = function (arg) { return { __await: arg }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () { return this; }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) { void 0 === PromiseImpl && (PromiseImpl = Promise); var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl); return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) { return result.done ? result.value : iter.next(); }); }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () { return this; }), define(Gp, "toString", function () { return "[object Generator]"; }), exports.keys = function (val) { var object = Object(val), keys = []; for (var key in object) keys.push(key); return keys.reverse(), function next() { for (; keys.length;) { var key = keys.pop(); if (key in object) return next.value = key, next.done = !1, next; } return next.done = !0, next; }; }, exports.values = values, Context.prototype = { constructor: Context, reset: function reset(skipTempReset) { if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined); }, stop: function stop() { this.done = !0; var rootRecord = this.tryEntries[0].completion; if ("throw" === rootRecord.type) throw rootRecord.arg; return this.rval; }, dispatchException: function dispatchException(exception) { if (this.done) throw exception; var context = this; function handle(loc, caught) { return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught; } for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i], record = entry.completion; if ("root" === entry.tryLoc) return handle("end"); if (entry.tryLoc <= this.prev) { var hasCatch = hasOwn.call(entry, "catchLoc"), hasFinally = hasOwn.call(entry, "finallyLoc"); if (hasCatch && hasFinally) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } else if (hasCatch) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); } else { if (!hasFinally) throw new Error("try statement without catch or finally"); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } } } }, abrupt: function abrupt(type, arg) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) { var finallyEntry = entry; break; } } finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null); var record = finallyEntry ? finallyEntry.completion : {}; return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record); }, complete: function complete(record, afterLoc) { if ("throw" === record.type) throw record.arg; return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel; }, finish: function finish(finallyLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel; } }, "catch": function _catch(tryLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc === tryLoc) { var record = entry.completion; if ("throw" === record.type) { var thrown = record.arg; resetTryEntry(entry); } return thrown; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(iterable, resultName, nextLoc) { return this.delegate = { iterator: values(iterable), resultName: resultName, nextLoc: nextLoc }, "next" === this.method && (this.arg = undefined), ContinueSentinel; } }, exports; }
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -29,12 +32,16 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   metaInfo: {
-    title: "OB Report"
+    title: "Users"
   },
   data: function data() {
     return {
+      editmode: false,
       isLoading: true,
+      SubmitProcessing: false,
+      email_exist: "",
       serverParams: {
+        columnFilters: {},
         sort: {
           field: "id",
           type: "desc"
@@ -42,81 +49,69 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
         page: 1,
         perPage: 10
       },
-      selectedIds: [],
       totalRows: "",
       search: "",
-      showDropdown: false,
-      Filter_date: "",
-      Filter_client: "",
-      Filter_status: "",
-      Filter_Ref: "",
-      Filter_warehouse: "",
-      customers: [],
-      warehouses: [],
-      details: [],
-      quotations: [],
-      quote: {},
       limit: "10",
-      email: {
-        to: "",
-        subject: "",
-        message: "",
-        client_name: "",
-        quote_Ref: ""
-      }
+      Filter_Name: "",
+      Filter_Email: "",
+      Filter_status: "",
+      Filter_Phone: "",
+      permissions: {},
+      users: [],
+      roles: [],
+      warehouses: [],
+      data: new FormData(),
+      user: {
+        firstname: "",
+        lastname: "",
+        username: "",
+        password: "",
+        NewPassword: null,
+        email: "",
+        phone: "",
+        statut: "",
+        role_id: "",
+        avatar: "",
+        is_all_warehouses: 1
+      },
+      assigned_warehouses: []
     };
   },
-  mounted: function mounted() {
-    var _this = this;
-    this.$root.$on("bv::dropdown::show", function (bvEvent) {
-      _this.showDropdown = true;
-    });
-    this.$root.$on("bv::dropdown::hide", function (bvEvent) {
-      _this.showDropdown = false;
-    });
-  },
-  computed: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_3__.mapGetters)(["currentUserPermissions", "currentUser"])), {}, {
+  computed: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_3__.mapGetters)(["currentUserPermissions"])), {}, {
     columns: function columns() {
       return [{
-        label: this.$t("date"),
-        field: "date",
+        label: this.$t("Firstname"),
+        field: "firstname",
         tdClass: "text-left",
         thClass: "text-left"
       }, {
-        label: this.$t("Reference"),
-        field: "Ref",
+        label: this.$t("lastname"),
+        field: "lastname",
         tdClass: "text-left",
         thClass: "text-left"
       }, {
-        label: this.$t("Client Name"),
-        field: "client_name",
+        label: this.$t("username"),
+        field: "username",
         tdClass: "text-left",
         thClass: "text-left"
       }, {
-        label: this.$t("Occurence Subject"),
-        field: "subject",
+        label: this.$t("Email"),
+        field: "email",
         tdClass: "text-left",
         thClass: "text-left"
       }, {
-        label: this.$t("Reporter Name"),
-        field: "reporter_name",
+        label: this.$t("Phone"),
+        field: "phone",
         tdClass: "text-left",
         thClass: "text-left"
       }, {
-        label: this.$t("Occurence Details"),
-        field: "notes",
+        label: this.$t("Status"),
+        field: "statut",
         html: true,
-        tdClass: "text-left",
-        thClass: "text-left"
-      },
-      // {
-      //   label: this.$t("Total"),
-      //   field: "GrandTotal",
-      //   type: "decimal",
-      //   tdClass: "text-left",
-      //   thClass: "text-left"
-      // },
-      {
+        sortable: false,
+        tdClass: "text-center",
+        thClass: "text-center"
+      }, {
         label: this.$t("Action"),
         field: "actions",
         html: true,
@@ -127,6 +122,22 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
     }
   }),
   methods: {
+    //------------- Submit Validation Create & Edit User
+    Submit_User: function Submit_User() {
+      var _this = this;
+      this.$refs.Create_User.validate().then(function (success) {
+        if (!success) {
+          _this.makeToast("danger", _this.$t("Please_fill_the_form_correctly"), _this.$t("Failed"));
+        } else {
+          if (!_this.editmode) {
+            _this.Create_User();
+          } else {
+            _this.Update_User();
+          }
+        }
+      });
+    },
+    //------ update Params Table
     updateParams: function updateParams(newProps) {
       this.serverParams = Object.assign({}, this.serverParams, newProps);
     },
@@ -137,7 +148,7 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
         this.updateParams({
           page: currentPage
         });
-        this.Get_Quotations(currentPage);
+        this.Get_Users(currentPage);
       }
     },
     //---- Event Per Page Change
@@ -149,40 +160,40 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
           page: 1,
           perPage: currentPerPage
         });
-        this.Get_Quotations(1);
+        this.Get_Users(1);
       }
     },
-    //---- Event Select Rows
-    selectionChanged: function selectionChanged(_ref3) {
-      var _this2 = this;
-      var selectedRows = _ref3.selectedRows;
-      this.selectedIds = [];
-      selectedRows.forEach(function (row, index) {
-        _this2.selectedIds.push(row.id);
-      });
-    },
-    //---- Event Sort
+    //------ Event Sort Change
     onSortChange: function onSortChange(params) {
-      var field = "";
-      if (params[0].field == "client_name") {
-        field = "client_id";
-      } else if (params[0].field == "warehouse_name") {
-        field = "warehouse_id";
-      } else {
-        field = params[0].field;
-      }
       this.updateParams({
         sort: {
           type: params[0].type,
-          field: field
+          field: params[0].field
         }
       });
-      this.Get_Quotations(this.serverParams.page);
+      this.Get_Users(this.serverParams.page);
     },
-    //---- Event Search
+    //------ Event Search
     onSearch: function onSearch(value) {
       this.search = value.searchTerm;
-      this.Get_Quotations(this.serverParams.page);
+      this.Get_Users(this.serverParams.page);
+    },
+    //------ Event Validation State
+    getValidationState: function getValidationState(_ref3) {
+      var dirty = _ref3.dirty,
+        validated = _ref3.validated,
+        _ref3$valid = _ref3.valid,
+        valid = _ref3$valid === void 0 ? null : _ref3$valid;
+      return dirty || validated ? valid : null;
+    },
+    //------ Reset Filter
+    Reset_Filter: function Reset_Filter() {
+      this.search = "";
+      this.Filter_Name = "";
+      this.Filter_status = "";
+      this.Filter_Phone = "";
+      this.Filter_Email = "";
+      this.Get_Users(this.serverParams.page);
     },
     //------ Toast
     makeToast: function makeToast(variant, msg, title) {
@@ -192,171 +203,232 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
         solid: true
       });
     },
-    //------ Reset Filter
-    Reset_Filter: function Reset_Filter() {
-      this.search = "";
-      this.Filter_date = "";
-      this.Filter_client = "";
-      this.Filter_status = "";
-      this.Filter_Ref = "";
-      this.Filter_warehouse = "";
-      this.Get_Quotations(this.serverParams.page);
+    Selected_Warehouse: function Selected_Warehouse(value) {
+      if (!value.length) {
+        this.assigned_warehouses = [];
+      }
     },
-    //------------------------------------- Quotations PDF -------------------------\\
-    Quotation_PDF: function Quotation_PDF() {
+    //------ Checked Status User
+    isChecked: function isChecked(user) {
+      var _this2 = this;
+      axios.put("users_switch_activated/" + user.id, {
+        statut: user.statut,
+        id: user.id
+      }).then(function (response) {
+        if (response.data.success) {
+          if (user.statut) {
+            user.statut = 1;
+            _this2.makeToast("success", _this2.$t("ActivateUser"), _this2.$t("Success"));
+          } else {
+            user.statut = 0;
+            _this2.makeToast("success", _this2.$t("DisActivateUser"), _this2.$t("Success"));
+          }
+        } else {
+          user.statut = 1;
+          _this2.makeToast("warning", _this2.$t("Delete.Therewassomethingwronge"), _this2.$t("Warning"));
+        }
+      })["catch"](function (error) {
+        user.statut = 1;
+        _this2.makeToast("warning", _this2.$t("Delete.Therewassomethingwronge"), _this2.$t("Warning"));
+      });
+    },
+    //--------------------------- Users PDF ---------------------------\\
+    Users_PDF: function Users_PDF() {
       var self = this;
       var pdf = new jspdf__WEBPACK_IMPORTED_MODULE_1__["default"]("p", "pt");
       var columns = [{
-        title: "Date",
-        dataKey: "date"
+        title: "First Name",
+        dataKey: "firstname"
       }, {
-        title: "Ref",
-        dataKey: "Ref"
+        title: "Last Name",
+        dataKey: "lastname"
       }, {
-        title: "Client",
-        dataKey: "client_name"
+        title: "Username",
+        dataKey: "username"
       }, {
-        title: "Reporter",
-        dataKey: "reporter_name"
+        title: "Email",
+        dataKey: "email"
       }, {
-        title: "Occurence Subject",
-        dataKey: "subject"
-      }, {
-        title: "Occurence Detail",
-        dataKey: "notes"
+        title: "Phone",
+        dataKey: "phone"
       }];
-      pdf.autoTable(columns, self.quotations);
-      pdf.text("OBReport List", 40, 25);
-      pdf.save("OBReport_List.pdf");
+      pdf.autoTable(columns, self.users);
+      pdf.text("User List", 40, 25);
+      pdf.save("User_List.pdf");
     },
-    //----------------------------------- Quotation PDF by id -------------------------\\
-    Quote_pdf: function Quote_pdf(quote, id) {
-      // Start the progress bar.
-      nprogress__WEBPACK_IMPORTED_MODULE_0___default().start();
-      nprogress__WEBPACK_IMPORTED_MODULE_0___default().set(0.1);
-      axios.get("quote_pdf/" + id, {
-        responseType: "blob",
-        // important
-        headers: {
-          "Content-Type": "application/json"
-        }
-      }).then(function (response) {
-        var url = window.URL.createObjectURL(new Blob([response.data]));
-        var link = document.createElement("a");
-        link.href = url;
-        link.setAttribute("download", "OBReport_" + quote.Ref + ".pdf");
-        document.body.appendChild(link);
-        link.click();
-        // Complete the animation of the  progress bar.
-        setTimeout(function () {
-          return nprogress__WEBPACK_IMPORTED_MODULE_0___default().done();
-        }, 500);
-      })["catch"](function () {
-        // Complete the animation of the  progress bar.
-        setTimeout(function () {
-          return nprogress__WEBPACK_IMPORTED_MODULE_0___default().done();
-        }, 500);
-      });
+    // Simply replaces null values with strings=''
+    setToStrings: function setToStrings() {
+      if (this.Filter_status === null) {
+        this.Filter_status = "";
+      }
     },
-    //------------------------------------ Form Send Quotation in  Email -------------------------\\
-    QuoteEmail: function QuoteEmail(quote) {
-      this.email.to = quote.client_email;
-      this.email.quote_Ref = quote.Ref;
-      this.email.client_name = quote.client_name;
-      this.SendEmail(quote.id);
-    },
-    SendEmail: function SendEmail(id) {
+    //----------------------------------- Get All Users  ---------------------------\\
+    Get_Users: function Get_Users(page) {
       var _this3 = this;
       // Start the progress bar.
       nprogress__WEBPACK_IMPORTED_MODULE_0___default().start();
       nprogress__WEBPACK_IMPORTED_MODULE_0___default().set(0.1);
-      axios.post("quotations_send_email", {
-        id: id,
-        to: this.email.to,
-        client_name: this.email.client_name,
-        Ref: this.email.quote_Ref
-      }).then(function (response) {
-        // Complete the animation of the  progress bar.
-        setTimeout(function () {
-          return nprogress__WEBPACK_IMPORTED_MODULE_0___default().done();
-        }, 500);
-        _this3.makeToast("success", _this3.$t("Send.TitleEmail"), _this3.$t("Success"));
-      })["catch"](function (error) {
-        // Complete the animation of the  progress bar.
-        setTimeout(function () {
-          return nprogress__WEBPACK_IMPORTED_MODULE_0___default().done();
-        }, 500);
-        _this3.makeToast("danger", _this3.$t("SMTPIncorrect"), _this3.$t("Failed"));
-      });
-    },
-    //---------------------------------------- Set To Strings-------------------------\\
-    setToStrings: function setToStrings() {
-      // Simply replaces null values with strings=''s
-      if (this.Filter_client === null) {
-        this.Filter_client = "";
-      } else if (this.Filter_warehouse === null) {
-        this.Filter_warehouse = "";
-      } else if (this.Filter_status === null) {
-        this.Filter_status = "";
-      }
-    },
-    //---------------------------------------- Get All Quotations -------------------------\\
-    Get_Quotations: function Get_Quotations(page) {
-      var _this4 = this;
-      // Start the progress bar.
-      nprogress__WEBPACK_IMPORTED_MODULE_0___default().start();
-      nprogress__WEBPACK_IMPORTED_MODULE_0___default().set(0.1);
       this.setToStrings();
-      axios.get("quotations?page=" + this.serverParams.page + "&Ref=" + this.Filter_Ref + "&client_id=" + this.Filter_client + "&statut=" + this.Filter_status + "&warehouse_id=" + this.Filter_warehouse + "&date=" + this.Filter_date + "&SortField=" + this.serverParams.sort.field + "&SortType=" + this.serverParams.sort.type + "&search=" + this.search + "&limit=" + this.limit).then(function (response) {
-        _this4.quotations = response.data.quotations;
-        _this4.customers = response.data.customers;
-        _this4.warehouses = response.data.warehouses;
-        _this4.totalRows = response.data.totalRows;
+      axios.get("users?page=" + page + "&name=" + this.Filter_Name + "&statut=" + this.Filter_status + "&phone=" + this.Filter_Phone + "&email=" + this.Filter_Email + "&SortField=" + this.serverParams.sort.field + "&SortType=" + this.serverParams.sort.type + "&search=" + this.search + "&limit=" + this.limit).then(function (response) {
+        _this3.users = response.data.users;
+        _this3.roles = response.data.roles;
+        _this3.warehouses = response.data.warehouses;
+        _this3.totalRows = response.data.totalRows;
 
         // Complete the animation of theprogress bar.
         nprogress__WEBPACK_IMPORTED_MODULE_0___default().done();
-        _this4.isLoading = false;
+        _this3.isLoading = false;
       })["catch"](function (response) {
         // Complete the animation of theprogress bar.
         nprogress__WEBPACK_IMPORTED_MODULE_0___default().done();
         setTimeout(function () {
-          _this4.isLoading = false;
+          _this3.isLoading = false;
         }, 500);
       });
     },
-    //-------------------------------------------- Delete Quotation -------------------------\\
-    Remove_Quotation: function Remove_Quotation(id) {
+    //------------------------------ Show Modal (Create User) -------------------------------\\
+    New_User: function New_User() {
+      this.reset_Form();
+      this.editmode = false;
+      this.$bvModal.show("New_User");
+    },
+    //------------------------------ Show Modal (Update User) -------------------------------\\
+    Edit_User: function Edit_User(user) {
+      this.Get_Users(this.serverParams.page);
+      this.reset_Form();
+      this.Get_Data_Edit(user.id);
+      this.user = user;
+      this.user.NewPassword = null;
+      this.editmode = true;
+      this.$bvModal.show("New_User");
+    },
+    //---------------------- Get_Data_Edit  ------------------------------\\
+    Get_Data_Edit: function Get_Data_Edit(id) {
+      var _this4 = this;
+      axios.get("/users/" + id + "/edit").then(function (response) {
+        _this4.assigned_warehouses = response.data.assigned_warehouses;
+      })["catch"](function (error) {});
+    },
+    //------------------------------ Event Upload Avatar -------------------------------\\
+    onFileSelected: function onFileSelected(e) {
       var _this5 = this;
-      this.$swal({
-        title: this.$t("Delete.Title"),
-        text: this.$t("Delete.Text"),
-        type: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
-        cancelButtonText: this.$t("Delete.cancelButtonText"),
-        confirmButtonText: this.$t("Delete.confirmButtonText")
-      }).then(function (result) {
-        if (result.value) {
-          // Start the progress bar.
-          nprogress__WEBPACK_IMPORTED_MODULE_0___default().start();
-          nprogress__WEBPACK_IMPORTED_MODULE_0___default().set(0.1);
-          axios["delete"]("quotations/" + id).then(function () {
-            _this5.$swal(_this5.$t("Delete.Deleted"), _this5.$t("Delete.QuoteDeleted"), "success");
-            Fire.$emit("Delete_Quote");
-          })["catch"](function () {
-            // Complete the animation of the  progress bar.
-            setTimeout(function () {
-              return nprogress__WEBPACK_IMPORTED_MODULE_0___default().done();
-            }, 500);
-            _this5.$swal(_this5.$t("Delete.Failed"), _this5.$t("Delete.Therewassomethingwronge"), "warning");
-          });
+      return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+        var _yield$_this5$$refs$A, valid;
+        return _regeneratorRuntime().wrap(function _callee$(_context) {
+          while (1) switch (_context.prev = _context.next) {
+            case 0:
+              _context.next = 2;
+              return _this5.$refs.Avatar.validate(e);
+            case 2:
+              _yield$_this5$$refs$A = _context.sent;
+              valid = _yield$_this5$$refs$A.valid;
+              if (valid) {
+                _this5.user.avatar = e.target.files[0];
+              } else {
+                _this5.user.avatar = "";
+              }
+            case 5:
+            case "end":
+              return _context.stop();
+          }
+        }, _callee);
+      }))();
+    },
+    //------------------------ Create User ---------------------------\\
+    Create_User: function Create_User() {
+      var _this6 = this;
+      var self = this;
+      self.SubmitProcessing = true;
+      self.data.append("firstname", self.user.firstname);
+      self.data.append("lastname", self.user.lastname);
+      self.data.append("username", self.user.username);
+      self.data.append("email", self.user.email);
+      self.data.append("password", self.user.password);
+      self.data.append("phone", self.user.phone);
+      self.data.append("role", self.user.role_id);
+      self.data.append("is_all_warehouses", self.user.is_all_warehouses);
+      self.data.append("avatar", self.user.avatar);
+
+      // append array assigned_warehouses
+      if (self.assigned_warehouses.length) {
+        for (var i = 0; i < self.assigned_warehouses.length; i++) {
+          self.data.append("assigned_to[" + i + "]", self.assigned_warehouses[i]);
         }
+      } else {
+        self.data.append("assigned_to", []);
+      }
+      axios.post("users", self.data).then(function (response) {
+        self.SubmitProcessing = false;
+        Fire.$emit("Event_User");
+        _this6.makeToast("success", _this6.$t("Create.TitleUser"), _this6.$t("Success"));
+      })["catch"](function (error) {
+        self.SubmitProcessing = false;
+        if (error.errors.email.length > 0) {
+          self.email_exist = error.errors.email[0];
+        }
+        _this6.makeToast("danger", _this6.$t("InvalidData"), _this6.$t("Failed"));
       });
     },
-    //---- Delete quotations by selection
-    delete_by_selected: function delete_by_selected() {
-      var _this6 = this;
+    //----------------------- Update User ---------------------------\\
+    Update_User: function Update_User() {
+      var _this7 = this;
+      var self = this;
+      self.SubmitProcessing = true;
+      self.data.append("firstname", self.user.firstname);
+      self.data.append("lastname", self.user.lastname);
+      self.data.append("username", self.user.username);
+      self.data.append("email", self.user.email);
+      self.data.append("NewPassword", self.user.NewPassword);
+      self.data.append("phone", self.user.phone);
+      self.data.append("role", self.user.role_id);
+      self.data.append("statut", self.user.statut);
+      self.data.append("is_all_warehouses", self.user.is_all_warehouses);
+      self.data.append("avatar", self.user.avatar);
+
+      // append array assigned_warehouses
+      if (self.assigned_warehouses.length) {
+        for (var i = 0; i < self.assigned_warehouses.length; i++) {
+          self.data.append("assigned_to[" + i + "]", self.assigned_warehouses[i]);
+        }
+      } else {
+        self.data.append("assigned_to", []);
+      }
+      self.data.append("_method", "put");
+      axios.post("users/" + this.user.id, self.data).then(function (response) {
+        _this7.makeToast("success", _this7.$t("Update.TitleUser"), _this7.$t("Success"));
+        Fire.$emit("Event_User");
+        self.SubmitProcessing = false;
+      })["catch"](function (error) {
+        if (error.errors.email.length > 0) {
+          self.email_exist = error.errors.email[0];
+        }
+        _this7.makeToast("danger", _this7.$t("InvalidData"), _this7.$t("Failed"));
+        self.SubmitProcessing = false;
+      });
+    },
+    //----------------------------- Reset Form ---------------------------\\
+    reset_Form: function reset_Form() {
+      this.user = {
+        id: "",
+        firstname: "",
+        lastname: "",
+        username: "",
+        password: "",
+        NewPassword: null,
+        email: "",
+        phone: "",
+        statut: "",
+        role_id: "",
+        avatar: "",
+        is_all_warehouses: 1
+      };
+      this.data = new FormData();
+      this.assigned_warehouses = [];
+      this.email_exist = "";
+    },
+    //--------------------------------- Remove User ---------------------------\\
+    Remove_User: function Remove_User(id) {
+      var _this8 = this;
       this.$swal({
         title: this.$t("Delete.Title"),
         text: this.$t("Delete.Text"),
@@ -368,36 +440,31 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
         confirmButtonText: this.$t("Delete.confirmButtonText")
       }).then(function (result) {
         if (result.value) {
-          // Start the progress bar.
-          nprogress__WEBPACK_IMPORTED_MODULE_0___default().start();
-          nprogress__WEBPACK_IMPORTED_MODULE_0___default().set(0.1);
-          axios.post("quotations_delete_by_selection", {
-            selectedIds: _this6.selectedIds
-          }).then(function () {
-            _this6.$swal(_this6.$t("Delete.Deleted"), _this6.$t("Delete.QuoteDeleted"), "success");
-            Fire.$emit("Delete_Quote");
+          axios["delete"]("users/" + id).then(function () {
+            _this8.$swal(_this8.$t("Delete.Deleted"), _this8.$t("Delete.UserDeleted"), "success");
+            Fire.$emit("Delete_User");
           })["catch"](function () {
-            // Complete the animation of theprogress bar.
-            setTimeout(function () {
-              return nprogress__WEBPACK_IMPORTED_MODULE_0___default().done();
-            }, 500);
-            _this6.$swal(_this6.$t("Delete.Failed"), _this6.$t("Delete.Therewassomethingwronge"), "warning");
+            _this8.$swal(_this8.$t("Delete.Failed"), "this User already linked with other operation", "warning");
           });
         }
       });
     }
   },
-  //-----------------------------Autoload function-------------------
+  // END METHODS
+
+  //----------------------------- Created function-------------------
   created: function created() {
-    var _this7 = this;
-    this.Get_Quotations(1);
-    Fire.$on("Delete_Quote", function () {
+    var _this9 = this;
+    this.Get_Users(1);
+    Fire.$on("Event_User", function () {
       setTimeout(function () {
-        _this7.Get_Quotations(_this7.serverParams.page);
-        // Complete the animation of the  progress bar.
-        setTimeout(function () {
-          return nprogress__WEBPACK_IMPORTED_MODULE_0___default().done();
-        }, 500);
+        _this9.Get_Users(_this9.serverParams.page);
+        _this9.$bvModal.hide("New_User");
+      }, 500);
+    });
+    Fire.$on("Delete_User", function () {
+      setTimeout(function () {
+        _this9.Get_Users(_this9.serverParams.page);
       }, 500);
     });
   }
@@ -405,10 +472,10 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/src/views/app/pages/obreport/index_obreport.vue?vue&type=template&id=1fd1d28f&":
-/*!***********************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/src/views/app/pages/obreport/index_obreport.vue?vue&type=template&id=1fd1d28f& ***!
-  \***********************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/src/views/app/pages/people/users.vue?vue&type=template&id=7e1871e5&":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/src/views/app/pages/people/users.vue?vue&type=template&id=7e1871e5& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -424,8 +491,8 @@ var render = function render() {
     staticClass: "main-content"
   }, [_c("breadcumb", {
     attrs: {
-      page: _vm.$t("All OB Reports"),
-      folder: _vm.$t("Ob Reports")
+      page: _vm.$t("UserManagement"),
+      folder: _vm.$t("Users")
     }
   }), _vm._v(" "), _vm.isLoading ? _c("div", {
     staticClass: "loading_page spinner spinner-primary mr-3"
@@ -434,14 +501,10 @@ var render = function render() {
       mode: "remote",
       columns: _vm.columns,
       totalRows: _vm.totalRows,
-      rows: _vm.quotations,
+      rows: _vm.users,
       "search-options": {
         enabled: true,
         placeholder: _vm.$t("Search_this_table")
-      },
-      "select-options": {
-        enabled: true,
-        clearSelectionText: ""
       },
       "pagination-options": {
         enabled: true,
@@ -449,91 +512,77 @@ var render = function render() {
         nextLabel: "next",
         prevLabel: "prev"
       },
-      styleClass: _vm.showDropdown ? "tableOne table-hover vgt-table full-height" : "tableOne table-hover vgt-table non-height"
+      styleClass: "table-hover tableOne vgt-table"
     },
     on: {
       "on-page-change": _vm.onPageChange,
       "on-per-page-change": _vm.onPerPageChange,
       "on-sort-change": _vm.onSortChange,
-      "on-search": _vm.onSearch,
-      "on-selected-rows-change": _vm.selectionChanged
+      "on-search": _vm.onSearch
     },
     scopedSlots: _vm._u([{
       key: "table-row",
       fn: function fn(props) {
-        return [props.column.field == "actions" ? _c("span", [_c("div", [_c("b-dropdown", {
+        return [props.column.field == "actions" ? _c("span", [_vm.currentUserPermissions && _vm.currentUserPermissions.includes("users_edit") ? _c("a", {
+          directives: [{
+            name: "b-tooltip",
+            rawName: "v-b-tooltip.hover",
+            modifiers: {
+              hover: true
+            }
+          }],
+          staticClass: "cursor-pointer",
           attrs: {
-            id: "dropdown-left",
-            variant: "link",
-            text: "Left align",
-            "toggle-class": "text-decoration-none",
-            size: "lg",
-            "no-caret": ""
-          },
-          scopedSlots: _vm._u([{
-            key: "button-content",
-            fn: function fn() {
-              return [_c("span", {
-                staticClass: "_dot _r_block-dot bg-dark"
-              }), _vm._v(" "), _c("span", {
-                staticClass: "_dot _r_block-dot bg-dark"
-              }), _vm._v(" "), _c("span", {
-                staticClass: "_dot _r_block-dot bg-dark"
-              })];
-            },
-            proxy: true
-          }], null, true)
-        }, [_vm._v(" "), _c("b-navbar-nav", [_c("b-dropdown-item", {
-          attrs: {
-            title: "Show",
-            to: "/app/obreport/detail/" + props.row.id
-          }
-        }, [_c("i", {
-          staticClass: "nav-icon i-Eye font-weight-bold mr-2"
-        }), _vm._v("\n                  " + _vm._s(_vm.$t("Detail OBreport")) + "\n                ")])], 1), _vm._v(" "), _c("b-dropdown-item", {
-          attrs: {
-            title: "PDF"
+            title: "Edit"
           },
           on: {
             click: function click($event) {
-              return _vm.Quote_pdf(props.row, props.row.id);
+              return _vm.Edit_User(props.row);
             }
           }
         }, [_c("i", {
-          staticClass: "nav-icon i-File-TXT font-weight-bold mr-2"
-        }), _vm._v("\n                " + _vm._s(_vm.$t("DownloadPdf")) + "\n              ")]), _vm._v(" "), _c("b-dropdown-item", {
+          staticClass: "i-Edit text-25 text-success"
+        })]) : _vm._e()]) : props.column.field == "statut" ? _c("div", [_c("label", {
+          staticClass: "switch switch-primary mr-3"
+        }, [_c("input", {
+          directives: [{
+            name: "model",
+            rawName: "v-model",
+            value: props.row.statut,
+            expression: "props.row.statut"
+          }],
           attrs: {
-            title: "Email"
+            type: "checkbox"
+          },
+          domProps: {
+            checked: Array.isArray(props.row.statut) ? _vm._i(props.row.statut, null) > -1 : props.row.statut
           },
           on: {
-            click: function click($event) {
-              return _vm.QuoteEmail(props.row, props.row.id);
-            }
+            change: [function ($event) {
+              var $$a = props.row.statut,
+                $$el = $event.target,
+                $$c = $$el.checked ? true : false;
+              if (Array.isArray($$a)) {
+                var $$v = null,
+                  $$i = _vm._i($$a, $$v);
+                if ($$el.checked) {
+                  $$i < 0 && _vm.$set(props.row, "statut", $$a.concat([$$v]));
+                } else {
+                  $$i > -1 && _vm.$set(props.row, "statut", $$a.slice(0, $$i).concat($$a.slice($$i + 1)));
+                }
+              } else {
+                _vm.$set(props.row, "statut", $$c);
+              }
+            }, function ($event) {
+              return _vm.isChecked(props.row);
+            }]
           }
-        }, [_c("i", {
-          staticClass: "nav-icon i-Envelope-2 font-weight-bold mr-2"
-        }), _vm._v("\n                " + _vm._s(_vm.$t("Send OB Report on Email")) + "\n              ")])], 1)], 1)]) : props.column.field == "Ref" ? _c("div", [_c("router-link", {
-          attrs: {
-            to: "/app/quotations/detail/" + props.row.id
-          }
-        }, [_c("span", {
-          staticClass: "ul-btn__text ml-1"
-        }, [_vm._v(_vm._s(props.row.Ref))])])], 1) : _vm._e()];
+        }), _vm._v(" "), _c("span", {
+          staticClass: "slider"
+        })])]) : _vm._e()];
       }
     }])
   }, [_c("div", {
-    attrs: {
-      slot: "selected-row-actions"
-    },
-    slot: "selected-row-actions"
-  }, [_c("button", {
-    staticClass: "btn btn-danger btn-sm",
-    on: {
-      click: function click($event) {
-        return _vm.delete_by_selected();
-      }
-    }
-  }, [_vm._v(_vm._s(_vm.$t("Del")))])]), _vm._v(" "), _c("div", {
     staticClass: "mt-2 mb-3",
     attrs: {
       slot: "table-actions"
@@ -548,7 +597,7 @@ var render = function render() {
       }
     }],
     attrs: {
-      variant: "outline-info ripple m-1",
+      variant: "outline-info m-1",
       size: "sm"
     }
   }, [_c("i", {
@@ -556,11 +605,11 @@ var render = function render() {
   }), _vm._v("\n          " + _vm._s(_vm.$t("Filter")) + "\n        ")]), _vm._v(" "), _c("b-button", {
     attrs: {
       size: "sm",
-      variant: "outline-success ripple m-1"
+      variant: "outline-success m-1"
     },
     on: {
       click: function click($event) {
-        return _vm.Quotation_PDF();
+        return _vm.Users_PDF();
       }
     }
   }, [_c("i", {
@@ -568,26 +617,27 @@ var render = function render() {
   }), _vm._v(" PDF\n        ")]), _vm._v(" "), _c("vue-excel-xlsx", {
     staticClass: "btn btn-sm btn-outline-danger ripple m-1",
     attrs: {
-      data: _vm.quotations,
+      data: _vm.users,
       columns: _vm.columns,
-      "file-name": "quotations",
+      "file-name": "users",
       "file-type": "xlsx",
-      "sheet-name": "quotations"
+      "sheet-name": "users"
     }
   }, [_c("i", {
     staticClass: "i-File-Excel"
-  }), _vm._v(" EXCEL\n        ")]), _vm._v(" "), _vm.currentUserPermissions && _vm.currentUserPermissions.includes("Quotations_add") ? _c("router-link", {
-    staticClass: "btn-sm btn btn-primary ripple btn-icon m-1",
+  }), _vm._v(" EXCEL\n        ")]), _vm._v(" "), _vm.currentUserPermissions && _vm.currentUserPermissions.includes("users_add") ? _c("b-button", {
     attrs: {
-      to: "/app/obreport/store"
+      size: "sm",
+      variant: "btn btn-primary btn-icon m-1"
+    },
+    on: {
+      click: function click($event) {
+        return _vm.New_User();
+      }
     }
-  }, [_c("span", {
-    staticClass: "ul-btn__icon"
   }, [_c("i", {
     staticClass: "i-Add"
-  })]), _vm._v(" "), _c("span", {
-    staticClass: "ul-btn__text ml-1"
-  }, [_vm._v(_vm._s(_vm.$t("Add")))])]) : _vm._e()], 1)])], 1), _vm._v(" "), _c("b-sidebar", {
+  }), _vm._v("\n          " + _vm._s(_vm.$t("Add")) + "\n        ")]) : _vm._e()], 1)])], 1), _vm._v(" "), _c("b-sidebar", {
     attrs: {
       id: "sidebar-right",
       title: _vm.$t("Filter"),
@@ -603,18 +653,19 @@ var render = function render() {
     }
   }, [_c("b-form-group", {
     attrs: {
-      label: _vm.$t("date")
+      label: _vm.$t("username")
     }
   }, [_c("b-form-input", {
     attrs: {
-      type: "date"
+      label: "Code",
+      placeholder: _vm.$t("username")
     },
     model: {
-      value: _vm.Filter_date,
+      value: _vm.Filter_Name,
       callback: function callback($$v) {
-        _vm.Filter_date = $$v;
+        _vm.Filter_Name = $$v;
       },
-      expression: "Filter_date"
+      expression: "Filter_Name"
     }
   })], 1)], 1), _vm._v(" "), _c("b-col", {
     attrs: {
@@ -622,19 +673,68 @@ var render = function render() {
     }
   }, [_c("b-form-group", {
     attrs: {
-      label: _vm.$t("Reference")
+      label: _vm.$t("Phone")
     }
   }, [_c("b-form-input", {
     attrs: {
-      label: "Reference",
-      placeholder: _vm.$t("Reference")
+      label: "Phone",
+      placeholder: _vm.$t("SearchByPhone")
     },
     model: {
-      value: _vm.Filter_Ref,
+      value: _vm.Filter_Phone,
       callback: function callback($$v) {
-        _vm.Filter_Ref = $$v;
+        _vm.Filter_Phone = $$v;
       },
-      expression: "Filter_Ref"
+      expression: "Filter_Phone"
+    }
+  })], 1)], 1), _vm._v(" "), _c("b-col", {
+    attrs: {
+      md: "12"
+    }
+  }, [_c("b-form-group", {
+    attrs: {
+      label: _vm.$t("Email")
+    }
+  }, [_c("b-form-input", {
+    attrs: {
+      label: "Email",
+      placeholder: _vm.$t("SearchByEmail")
+    },
+    model: {
+      value: _vm.Filter_Email,
+      callback: function callback($$v) {
+        _vm.Filter_Email = $$v;
+      },
+      expression: "Filter_Email"
+    }
+  })], 1)], 1), _vm._v(" "), _c("b-col", {
+    attrs: {
+      md: "12"
+    }
+  }, [_c("b-form-group", {
+    attrs: {
+      label: _vm.$t("Status")
+    }
+  }, [_c("v-select", {
+    attrs: {
+      reduce: function reduce(label) {
+        return label.value;
+      },
+      placeholder: _vm.$t("Choose_Status"),
+      options: [{
+        label: "Actif",
+        value: "1"
+      }, {
+        label: "Inactif",
+        value: "0"
+      }]
+    },
+    model: {
+      value: _vm.Filter_status,
+      callback: function callback($$v) {
+        _vm.Filter_status = $$v;
+      },
+      expression: "Filter_status"
     }
   })], 1)], 1), _vm._v(" "), _c("b-col", {
     attrs: {
@@ -643,13 +743,13 @@ var render = function render() {
     }
   }, [_c("b-button", {
     attrs: {
-      variant: "primary ripple m-1",
+      variant: "primary m-1",
       size: "sm",
       block: ""
     },
     on: {
       click: function click($event) {
-        return _vm.Get_Quotations(_vm.serverParams.page);
+        return _vm.Get_Users(_vm.serverParams.page);
       }
     }
   }, [_c("i", {
@@ -661,7 +761,7 @@ var render = function render() {
     }
   }, [_c("b-button", {
     attrs: {
-      variant: "danger ripple m-1",
+      variant: "danger m-1",
       size: "sm",
       block: ""
     },
@@ -672,9 +772,520 @@ var render = function render() {
     }
   }, [_c("i", {
     staticClass: "i-Power-2"
-  }), _vm._v("\n            " + _vm._s(_vm.$t("Reset")) + "\n          ")])], 1)], 1)], 1)])], 1);
+  }), _vm._v("\n            " + _vm._s(_vm.$t("Reset")) + "\n          ")])], 1)], 1)], 1)]), _vm._v(" "), _c("validation-observer", {
+    ref: "Create_User"
+  }, [_c("b-modal", {
+    attrs: {
+      "hide-footer": "",
+      size: "lg",
+      id: "New_User",
+      title: _vm.editmode ? _vm.$t("Edit") : _vm.$t("Add")
+    }
+  }, [_c("b-form", {
+    attrs: {
+      enctype: "multipart/form-data"
+    },
+    on: {
+      submit: function submit($event) {
+        $event.preventDefault();
+        return _vm.Submit_User.apply(null, arguments);
+      }
+    }
+  }, [_c("b-row", [_c("b-col", {
+    attrs: {
+      md: "6",
+      sm: "12"
+    }
+  }, [_c("validation-provider", {
+    attrs: {
+      name: "Firstname",
+      rules: {
+        required: true,
+        min: 3,
+        max: 30
+      }
+    },
+    scopedSlots: _vm._u([{
+      key: "default",
+      fn: function fn(validationContext) {
+        return [_c("b-form-group", {
+          attrs: {
+            label: _vm.$t("Firstname") + " " + "*"
+          }
+        }, [_c("b-form-input", {
+          attrs: {
+            state: _vm.getValidationState(validationContext),
+            "aria-describedby": "Firstname-feedback",
+            label: "Firstname",
+            placeholder: _vm.$t("Firstname")
+          },
+          model: {
+            value: _vm.user.firstname,
+            callback: function callback($$v) {
+              _vm.$set(_vm.user, "firstname", $$v);
+            },
+            expression: "user.firstname"
+          }
+        }), _vm._v(" "), _c("b-form-invalid-feedback", {
+          attrs: {
+            id: "Firstname-feedback"
+          }
+        }, [_vm._v(_vm._s(validationContext.errors[0]))])], 1)];
+      }
+    }])
+  })], 1), _vm._v(" "), _c("b-col", {
+    attrs: {
+      md: "6",
+      sm: "12"
+    }
+  }, [_c("validation-provider", {
+    attrs: {
+      name: "lastname",
+      rules: {
+        required: true,
+        min: 3,
+        max: 30
+      }
+    },
+    scopedSlots: _vm._u([{
+      key: "default",
+      fn: function fn(validationContext) {
+        return [_c("b-form-group", {
+          attrs: {
+            label: _vm.$t("lastname") + " " + "*"
+          }
+        }, [_c("b-form-input", {
+          attrs: {
+            state: _vm.getValidationState(validationContext),
+            "aria-describedby": "lastname-feedback",
+            label: "lastname",
+            placeholder: _vm.$t("lastname")
+          },
+          model: {
+            value: _vm.user.lastname,
+            callback: function callback($$v) {
+              _vm.$set(_vm.user, "lastname", $$v);
+            },
+            expression: "user.lastname"
+          }
+        }), _vm._v(" "), _c("b-form-invalid-feedback", {
+          attrs: {
+            id: "lastname-feedback"
+          }
+        }, [_vm._v(_vm._s(validationContext.errors[0]))])], 1)];
+      }
+    }])
+  })], 1), _vm._v(" "), _c("b-col", {
+    attrs: {
+      md: "6",
+      sm: "12"
+    }
+  }, [_c("validation-provider", {
+    attrs: {
+      name: "username",
+      rules: {
+        required: true,
+        min: 3,
+        max: 30
+      }
+    },
+    scopedSlots: _vm._u([{
+      key: "default",
+      fn: function fn(validationContext) {
+        return [_c("b-form-group", {
+          attrs: {
+            label: _vm.$t("username") + " " + "*"
+          }
+        }, [_c("b-form-input", {
+          attrs: {
+            state: _vm.getValidationState(validationContext),
+            "aria-describedby": "username-feedback",
+            label: "username",
+            placeholder: _vm.$t("username")
+          },
+          model: {
+            value: _vm.user.username,
+            callback: function callback($$v) {
+              _vm.$set(_vm.user, "username", $$v);
+            },
+            expression: "user.username"
+          }
+        }), _vm._v(" "), _c("b-form-invalid-feedback", {
+          attrs: {
+            id: "username-feedback"
+          }
+        }, [_vm._v(_vm._s(validationContext.errors[0]))])], 1)];
+      }
+    }])
+  })], 1), _vm._v(" "), _c("b-col", {
+    attrs: {
+      md: "6",
+      sm: "12"
+    }
+  }, [_c("validation-provider", {
+    attrs: {
+      name: "Phone",
+      rules: {
+        required: true
+      }
+    },
+    scopedSlots: _vm._u([{
+      key: "default",
+      fn: function fn(validationContext) {
+        return [_c("b-form-group", {
+          attrs: {
+            label: _vm.$t("Phone") + " " + "*"
+          }
+        }, [_c("b-form-input", {
+          attrs: {
+            state: _vm.getValidationState(validationContext),
+            "aria-describedby": "Phone-feedback",
+            label: "Phone",
+            placeholder: _vm.$t("Phone")
+          },
+          model: {
+            value: _vm.user.phone,
+            callback: function callback($$v) {
+              _vm.$set(_vm.user, "phone", $$v);
+            },
+            expression: "user.phone"
+          }
+        }), _vm._v(" "), _c("b-form-invalid-feedback", {
+          attrs: {
+            id: "Phone-feedback"
+          }
+        }, [_vm._v(_vm._s(validationContext.errors[0]))])], 1)];
+      }
+    }])
+  })], 1), _vm._v(" "), _c("b-col", {
+    attrs: {
+      md: "6",
+      sm: "12"
+    }
+  }, [_c("validation-provider", {
+    attrs: {
+      name: "Email",
+      rules: {
+        required: true
+      }
+    },
+    scopedSlots: _vm._u([{
+      key: "default",
+      fn: function fn(validationContext) {
+        return [_c("b-form-group", {
+          attrs: {
+            label: _vm.$t("Email") + " " + "*"
+          }
+        }, [_c("b-form-input", {
+          attrs: {
+            state: _vm.getValidationState(validationContext),
+            "aria-describedby": "Email-feedback",
+            label: "Email",
+            placeholder: _vm.$t("Email")
+          },
+          model: {
+            value: _vm.user.email,
+            callback: function callback($$v) {
+              _vm.$set(_vm.user, "email", $$v);
+            },
+            expression: "user.email"
+          }
+        }), _vm._v(" "), _c("b-form-invalid-feedback", {
+          attrs: {
+            id: "Email-feedback"
+          }
+        }, [_vm._v(_vm._s(validationContext.errors[0]))]), _vm._v(" "), _vm.email_exist != "" ? _c("b-alert", {
+          staticClass: "error mt-1",
+          attrs: {
+            show: "",
+            variant: "danger"
+          }
+        }, [_vm._v(_vm._s(_vm.email_exist))]) : _vm._e()], 1)];
+      }
+    }])
+  })], 1), _vm._v(" "), !_vm.editmode ? _c("b-col", {
+    attrs: {
+      md: "6",
+      sm: "12"
+    }
+  }, [_c("validation-provider", {
+    attrs: {
+      name: "password",
+      rules: {
+        required: true,
+        min: 6,
+        max: 14
+      }
+    },
+    scopedSlots: _vm._u([{
+      key: "default",
+      fn: function fn(validationContext) {
+        return [_c("b-form-group", {
+          attrs: {
+            label: _vm.$t("password") + " " + "*"
+          }
+        }, [_c("b-form-input", {
+          attrs: {
+            state: _vm.getValidationState(validationContext),
+            "aria-describedby": "password-feedback",
+            label: "password",
+            type: "password",
+            placeholder: _vm.$t("password")
+          },
+          model: {
+            value: _vm.user.password,
+            callback: function callback($$v) {
+              _vm.$set(_vm.user, "password", $$v);
+            },
+            expression: "user.password"
+          }
+        }), _vm._v(" "), _c("b-form-invalid-feedback", {
+          attrs: {
+            id: "password-feedback"
+          }
+        }, [_vm._v(_vm._s(validationContext.errors[0]))])], 1)];
+      }
+    }], null, false, 3778237088)
+  })], 1) : _vm._e(), _vm._v(" "), _c("b-col", {
+    staticClass: "mb-3",
+    attrs: {
+      md: "6",
+      sm: "12"
+    }
+  }, [_c("validation-provider", {
+    attrs: {
+      name: "role",
+      rules: {
+        required: true
+      }
+    },
+    scopedSlots: _vm._u([{
+      key: "default",
+      fn: function fn(_ref) {
+        var valid = _ref.valid,
+          errors = _ref.errors;
+        return _c("b-form-group", {
+          attrs: {
+            label: _vm.$t("RoleName") + " " + "*"
+          }
+        }, [_c("v-select", {
+          "class": {
+            "is-invalid": !!errors.length
+          },
+          attrs: {
+            state: errors[0] ? false : valid ? true : null,
+            reduce: function reduce(label) {
+              return label.value;
+            },
+            placeholder: _vm.$t("PleaseSelect"),
+            options: _vm.roles.map(function (roles) {
+              return {
+                label: roles.name,
+                value: roles.id
+              };
+            })
+          },
+          model: {
+            value: _vm.user.role_id,
+            callback: function callback($$v) {
+              _vm.$set(_vm.user, "role_id", $$v);
+            },
+            expression: "user.role_id"
+          }
+        }), _vm._v(" "), _c("b-form-invalid-feedback", [_vm._v(_vm._s(errors[0]))])], 1);
+      }
+    }])
+  })], 1), _vm._v(" "), _c("b-col", {
+    staticClass: "mb-3",
+    attrs: {
+      md: "6",
+      sm: "12"
+    }
+  }, [_c("validation-provider", {
+    ref: "Avatar",
+    attrs: {
+      name: "Avatar",
+      rules: "mimes:image/*|size:200"
+    },
+    scopedSlots: _vm._u([{
+      key: "default",
+      fn: function fn(_ref2) {
+        var validate = _ref2.validate,
+          valid = _ref2.valid,
+          errors = _ref2.errors;
+        return _c("b-form-group", {
+          attrs: {
+            label: _vm.$t("UserImage")
+          }
+        }, [_c("input", {
+          "class": {
+            "is-invalid": !!errors.length
+          },
+          attrs: {
+            state: errors[0] ? false : valid ? true : null,
+            label: "Choose Avatar",
+            type: "file"
+          },
+          on: {
+            change: _vm.onFileSelected
+          }
+        }), _vm._v(" "), _c("b-form-invalid-feedback", {
+          attrs: {
+            id: "Avatar-feedback"
+          }
+        }, [_vm._v(_vm._s(errors[0]))])], 1);
+      }
+    }])
+  })], 1), _vm._v(" "), _vm.editmode ? _c("b-col", {
+    staticClass: "mb-3",
+    attrs: {
+      md: "6"
+    }
+  }, [_c("validation-provider", {
+    attrs: {
+      name: "New password",
+      rules: {
+        min: 6,
+        max: 14
+      }
+    },
+    scopedSlots: _vm._u([{
+      key: "default",
+      fn: function fn(validationContext) {
+        return [_c("b-form-group", {
+          attrs: {
+            label: _vm.$t("Newpassword")
+          }
+        }, [_c("b-form-input", {
+          attrs: {
+            state: _vm.getValidationState(validationContext),
+            "aria-describedby": "Nawpassword-feedback",
+            placeholder: _vm.$t("LeaveBlank"),
+            label: "New password"
+          },
+          model: {
+            value: _vm.user.NewPassword,
+            callback: function callback($$v) {
+              _vm.$set(_vm.user, "NewPassword", $$v);
+            },
+            expression: "user.NewPassword"
+          }
+        }), _vm._v(" "), _c("b-form-invalid-feedback", {
+          attrs: {
+            id: "Nawpassword-feedback"
+          }
+        }, [_vm._v(_vm._s(validationContext.errors[0]))])], 1)];
+      }
+    }], null, false, 1010016937)
+  })], 1) : _vm._e(), _vm._v(" "), _c("b-col", {
+    attrs: {
+      md: "4",
+      sm: "4"
+    }
+  }, [_c("h5", [_vm._v(_vm._s(_vm.$t("Assigned_warehouses")))])]), _vm._v(" "), _c("b-col", {
+    attrs: {
+      md: "8",
+      sm: "8"
+    }
+  }, [_c("label", {
+    staticClass: "checkbox checkbox-primary mb-3"
+  }, [_c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.user.is_all_warehouses,
+      expression: "user.is_all_warehouses"
+    }],
+    attrs: {
+      type: "checkbox"
+    },
+    domProps: {
+      checked: Array.isArray(_vm.user.is_all_warehouses) ? _vm._i(_vm.user.is_all_warehouses, null) > -1 : _vm.user.is_all_warehouses
+    },
+    on: {
+      change: function change($event) {
+        var $$a = _vm.user.is_all_warehouses,
+          $$el = $event.target,
+          $$c = $$el.checked ? true : false;
+        if (Array.isArray($$a)) {
+          var $$v = null,
+            $$i = _vm._i($$a, $$v);
+          if ($$el.checked) {
+            $$i < 0 && _vm.$set(_vm.user, "is_all_warehouses", $$a.concat([$$v]));
+          } else {
+            $$i > -1 && _vm.$set(_vm.user, "is_all_warehouses", $$a.slice(0, $$i).concat($$a.slice($$i + 1)));
+          }
+        } else {
+          _vm.$set(_vm.user, "is_all_warehouses", $$c);
+        }
+      }
+    }
+  }), _c("h5", [_vm._v(_vm._s(_vm.$t("All_Warehouses")) + " "), _c("i", {
+    directives: [{
+      name: "b-tooltip",
+      rawName: "v-b-tooltip.hover.bottom",
+      modifiers: {
+        hover: true,
+        bottom: true
+      }
+    }],
+    staticClass: "text-info font-weight-bold i-Speach-BubbleAsking",
+    attrs: {
+      title: "If 'All Warehouses' Selected , User Can access all data for the selected Warehouses"
+    }
+  })]), _c("span", {
+    staticClass: "checkmark"
+  })]), _vm._v(" "), _c("b-form-group", {
+    staticClass: "mt-2",
+    attrs: {
+      label: _vm.$t("Some_warehouses")
+    }
+  }, [_c("v-select", {
+    attrs: {
+      multiple: "",
+      reduce: function reduce(label) {
+        return label.value;
+      },
+      placeholder: _vm.$t("PleaseSelect"),
+      options: _vm.warehouses.map(function (warehouses) {
+        return {
+          label: warehouses.name,
+          value: warehouses.id
+        };
+      })
+    },
+    on: {
+      input: _vm.Selected_Warehouse
+    },
+    model: {
+      value: _vm.assigned_warehouses,
+      callback: function callback($$v) {
+        _vm.assigned_warehouses = $$v;
+      },
+      expression: "assigned_warehouses"
+    }
+  })], 1)], 1), _vm._v(" "), _c("b-col", {
+    staticClass: "mt-3",
+    attrs: {
+      md: "12"
+    }
+  }, [_c("b-button", {
+    attrs: {
+      variant: "primary",
+      type: "submit",
+      disabled: _vm.SubmitProcessing
+    }
+  }, [_vm._v(_vm._s(_vm.$t("submit")))]), _vm._v(" "), _vm.SubmitProcessing ? _vm._m(0) : _vm._e()], 1)], 1)], 1)], 1)], 1)], 1);
 };
-var staticRenderFns = [];
+var staticRenderFns = [function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("div", {
+    staticClass: "typo__p"
+  }, [_c("div", {
+    staticClass: "spinner sm spinner-primary mt-3"
+  })]);
+}];
 render._withStripped = true;
 
 
@@ -5298,10 +5909,10 @@ function(t){t.__bidiEngine__=t.prototype.__bidiEngine__=function(t){var r,n,i,a,
 
 /***/ }),
 
-/***/ "./resources/src/views/app/pages/obreport/index_obreport.vue":
-/*!*******************************************************************!*\
-  !*** ./resources/src/views/app/pages/obreport/index_obreport.vue ***!
-  \*******************************************************************/
+/***/ "./resources/src/views/app/pages/people/users.vue":
+/*!********************************************************!*\
+  !*** ./resources/src/views/app/pages/people/users.vue ***!
+  \********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -5309,8 +5920,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _index_obreport_vue_vue_type_template_id_1fd1d28f___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index_obreport.vue?vue&type=template&id=1fd1d28f& */ "./resources/src/views/app/pages/obreport/index_obreport.vue?vue&type=template&id=1fd1d28f&");
-/* harmony import */ var _index_obreport_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index_obreport.vue?vue&type=script&lang=js& */ "./resources/src/views/app/pages/obreport/index_obreport.vue?vue&type=script&lang=js&");
+/* harmony import */ var _users_vue_vue_type_template_id_7e1871e5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./users.vue?vue&type=template&id=7e1871e5& */ "./resources/src/views/app/pages/people/users.vue?vue&type=template&id=7e1871e5&");
+/* harmony import */ var _users_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./users.vue?vue&type=script&lang=js& */ "./resources/src/views/app/pages/people/users.vue?vue&type=script&lang=js&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -5320,9 +5931,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 ;
 var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _index_obreport_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _index_obreport_vue_vue_type_template_id_1fd1d28f___WEBPACK_IMPORTED_MODULE_0__.render,
-  _index_obreport_vue_vue_type_template_id_1fd1d28f___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  _users_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _users_vue_vue_type_template_id_7e1871e5___WEBPACK_IMPORTED_MODULE_0__.render,
+  _users_vue_vue_type_template_id_7e1871e5___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
   null,
   null,
@@ -5332,15 +5943,15 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/src/views/app/pages/obreport/index_obreport.vue"
+component.options.__file = "resources/src/views/app/pages/people/users.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/src/views/app/pages/obreport/index_obreport.vue?vue&type=script&lang=js&":
-/*!********************************************************************************************!*\
-  !*** ./resources/src/views/app/pages/obreport/index_obreport.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************************/
+/***/ "./resources/src/views/app/pages/people/users.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************!*\
+  !*** ./resources/src/views/app/pages/people/users.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -5348,24 +5959,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_obreport_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./index_obreport.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/src/views/app/pages/obreport/index_obreport.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_obreport_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_users_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./users.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/src/views/app/pages/people/users.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_users_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/src/views/app/pages/obreport/index_obreport.vue?vue&type=template&id=1fd1d28f&":
-/*!**************************************************************************************************!*\
-  !*** ./resources/src/views/app/pages/obreport/index_obreport.vue?vue&type=template&id=1fd1d28f& ***!
-  \**************************************************************************************************/
+/***/ "./resources/src/views/app/pages/people/users.vue?vue&type=template&id=7e1871e5&":
+/*!***************************************************************************************!*\
+  !*** ./resources/src/views/app/pages/people/users.vue?vue&type=template&id=7e1871e5& ***!
+  \***************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_index_obreport_vue_vue_type_template_id_1fd1d28f___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_index_obreport_vue_vue_type_template_id_1fd1d28f___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_users_vue_vue_type_template_id_7e1871e5___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_users_vue_vue_type_template_id_7e1871e5___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_index_obreport_vue_vue_type_template_id_1fd1d28f___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!../../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./index_obreport.vue?vue&type=template&id=1fd1d28f& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/src/views/app/pages/obreport/index_obreport.vue?vue&type=template&id=1fd1d28f&");
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_users_vue_vue_type_template_id_7e1871e5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!../../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./users.vue?vue&type=template&id=7e1871e5& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/src/views/app/pages/people/users.vue?vue&type=template&id=7e1871e5&");
 
 
 /***/ }),

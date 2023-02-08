@@ -3,7 +3,9 @@
 namespace App\Providers;
 
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+use Laravel\Passport\Passport;
 use Illuminate\Support\Facades\Gate;
+use Carbon\Carbon;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -14,6 +16,12 @@ class AuthServiceProvider extends ServiceProvider
      */
     protected $policies = [
         // 'App\Models\Model' => 'App\Policies\ModelPolicy',
+        'App\Models\Role'                      => 'App\Policies\RolePolicy',
+        'App\Models\Server'                    => 'App\Policies\ServerPolicy',
+        'App\Models\Setting'                   => 'App\Policies\SettingPolicy',
+        'App\Models\User'                      => 'App\Policies\UserPolicy',
+        'App\Models\Branch'                    => 'App\Policies\BranchPolicy',
+        'App\Models\ObReport'                  => 'App\Policies\ObReportPolicy',
     ];
 
     /**
@@ -25,6 +33,6 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //
+        Passport::routes();
     }
 }

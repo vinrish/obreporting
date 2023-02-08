@@ -43,12 +43,12 @@ const mutations = {
     clearError(state) {
         state.error = null;
     },
-   
+
     setPermissions(state, Permissions) {
         state.Permissions = Permissions;
     },
 
-   
+
     setUser(state, user) {
         state.user = user;
     },

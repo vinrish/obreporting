@@ -19,7 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 //--------------------------- Reset Password  ---------------------------
-Route::post('register', 'RegisterController@store');
+// Route::post('register', 'RegisterController@store');
 Route::group([
     'prefix' => 'password',
 ], function () {

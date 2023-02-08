@@ -27,7 +27,7 @@ class ObReportsController extends Controller
     {
         $this->authorizeForUser($request->user('api'), 'view', ObReport::class);
         $role = Auth::user()->roles()->first();
-        $view_records = Role::findOrFail($role->id)->inRole('record_view');
+        // $view_records = Role::findOrFail($role->id)->inRole('record_view');
 
         // How many items do you want to display.
         $perPage = $request->limit;
@@ -55,12 +55,12 @@ class ObReportsController extends Controller
         $data = array();
 
         // Check If User Has Permission View  All Records
-        $ObReports = ObReport::where('deleted_at', '=', null)
-            ->where(function ($query) use ($view_records) {
-                if (!$view_records) {
-                    return $query->where('user_id', '=', Auth::user()->id);
-                }
-            });
+        $ObReports = ObReport::where('deleted_at', '=', null);
+            // ->where(function ($query) use ($view_records) {
+            //     if (!$view_records) {
+            //         return $query->where('user_id', '=', Auth::user()->id);
+            //     }
+            // });
 
         //Multiple Filter
         $Filtred = $helpers->filter($ObReports, $columns, $param, $request)
@@ -120,7 +120,7 @@ class ObReportsController extends Controller
 
         return response()->json([
             'totalRows' => $totalRows,
-            'ObReports' => $data,
+            'obreports' => $data,
             // 'customers' => $customers,
             // 'warehouses' => $warehouses,
         ]);

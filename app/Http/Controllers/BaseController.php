@@ -74,9 +74,9 @@ class BaseController extends Controller
     public function clearCookie()
     {
         $domain = ($_SERVER['SERVER_NAME'] != 'localhost') ? $_SERVER['SERVER_NAME'] : '.'.$_SERVER['SERVER_NAME'];
-        if (isset($_COOKIE['Springs_token'])) {
-            unset($_COOKIE['Springs_token']);
-            setcookie('Springs_token', '', time() - 2147483647, '/', $domain); // empty value and old timestamp
+        if (isset($_COOKIE['ob_token'])) {
+            unset($_COOKIE['ob_token']);
+            setcookie('ob_token', '', time() - 2147483647, '/', $domain); // empty value and old timestamp
         }
     }
 

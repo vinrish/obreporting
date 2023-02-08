@@ -39,10 +39,10 @@ class AuthController extends BaseController
         $user = auth()->user();
         $tokenResult = $user->createToken('Access Token');
         $token = $tokenResult->token;
-        $this->setCookie('Springs_token', $tokenResult->accessToken);
+        $this->setCookie('ob_token', $tokenResult->accessToken);
 
         return response()->json([
-            'Springs_token' => $tokenResult->accessToken,
+            'ob_token' => $tokenResult->accessToken,
             'username' => Auth::User()->username,
             'status' => true,
         ]);
@@ -55,7 +55,7 @@ class AuthController extends BaseController
         if (Auth::check()) {
             $user = Auth::user()->token();
             $user->revoke();
-            $this->destroyCookie('Springs_token');
+            $this->destroyCookie('ob_token');
             return response()->json('success');
         }
 

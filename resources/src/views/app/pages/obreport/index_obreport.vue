@@ -8,7 +8,7 @@
         mode="remote"
         :columns="columns"
         :totalRows="totalRows"
-        :rows="quotations"
+        :rows="obreports"
         @on-page-change="onPageChange"
         @on-per-page-change="onPerPageChange"
         @on-sort-change="onSortChange"
@@ -257,7 +257,7 @@ export default {
       customers: [],
       warehouses: [],
       details: [],
-      quotations: [],
+      obreports: [],
       quote: {},
       limit: "10",
       email: {
@@ -514,7 +514,7 @@ export default {
       this.setToStrings();
       axios
         .get(
-          "quotations?page=" +
+          "obreports?page=" +
             this.serverParams.page +
             "&Ref=" +
             this.Filter_Ref +
@@ -522,8 +522,8 @@ export default {
             this.Filter_client +
             "&statut=" +
             this.Filter_status +
-            "&warehouse_id=" +
-            this.Filter_warehouse +
+            // "&warehouse_id=" +
+            // this.Filter_warehouse +
             "&date=" +
             this.Filter_date +
             "&SortField=" +
@@ -536,9 +536,9 @@ export default {
             this.limit
         )
         .then(response => {
-          this.quotations = response.data.quotations;
-          this.customers = response.data.customers;
-          this.warehouses = response.data.warehouses;
+          this.quotations = response.data.obreports;
+        //   this.customers = response.data.customers;
+        //   this.warehouses = response.data.warehouses;
           this.totalRows = response.data.totalRows;
 
           // Complete the animation of theprogress bar.
