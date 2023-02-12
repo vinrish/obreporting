@@ -14,7 +14,7 @@
         @on-search="onSearch"
         :search-options="{
         enabled: true,
-        placeholder: $t('Search_this_table'),  
+        placeholder: $t('Search_this_table'),
       }"
         :pagination-options="{
         enabled: true,
@@ -327,7 +327,7 @@
 
             <b-col md="8" sm="8">
               <label class="checkbox checkbox-primary mb-3"><input type="checkbox" v-model="user.is_all_warehouses"><h5>{{$t('All_Warehouses')}} <i v-b-tooltip.hover.bottom title="If 'All Warehouses' Selected , User Can access all data for the selected Warehouses" class="text-info font-weight-bold i-Speach-BubbleAsking"></i></h5><span class="checkmark"></span></label>
-               
+
                <b-form-group class="mt-2" :label="$t('Some_warehouses')">
                   <v-select
                     multiple
@@ -335,7 +335,7 @@
                     @input="Selected_Warehouse"
                     :reduce="label => label.value"
                     :placeholder="$t('PleaseSelect')"
-                    :options="warehouses.map(warehouses => ({label: warehouses.name, value: warehouses.id}))"
+                    :options="branches.map(branches => ({label: branches.name, value: branches.id}))"
                   />
                 </b-form-group>
             </b-col>
@@ -389,7 +389,7 @@ export default {
       permissions: {},
       users: [],
       roles: [],
-      warehouses: [],
+      branches: [],
       data: new FormData(),
       user: {
         firstname: "",
@@ -402,7 +402,7 @@ export default {
         statut: "",
         role_id: "",
         avatar: "",
-        is_all_warehouses:1,
+        is_all_branches:1,
       },
       assigned_warehouses:[],
     };
@@ -651,7 +651,7 @@ export default {
         .then(response => {
           this.users = response.data.users;
           this.roles = response.data.roles;
-          this.warehouses = response.data.warehouses;
+          this.branches = response.data.branches;
           this.totalRows = response.data.totalRows;
 
           // Complete the animation of theprogress bar.
@@ -690,13 +690,13 @@ export default {
         axios
             .get("/users/"+id+"/edit")
             .then(response => {
-                this.assigned_warehouses   = response.data.assigned_warehouses;
+                this.assigned_warehouses   = response.data.branches;
             })
             .catch(error => {
             });
     },
 
-        
+
     //------------------------------ Event Upload Avatar -------------------------------\\
     async onFileSelected(e) {
       const { valid } = await this.$refs.Avatar.validate(e);
@@ -719,7 +719,7 @@ export default {
       self.data.append("password", self.user.password);
       self.data.append("phone", self.user.phone);
       self.data.append("role", self.user.role_id);
-      self.data.append("is_all_warehouses", self.user.is_all_warehouses);
+      self.data.append("is_all_branches", self.user.is_all_branches);
       self.data.append("avatar", self.user.avatar);
 
       // append array assigned_warehouses
@@ -764,7 +764,7 @@ export default {
       self.data.append("phone", self.user.phone);
       self.data.append("role", self.user.role_id);
       self.data.append("statut", self.user.statut);
-      self.data.append("is_all_warehouses", self.user.is_all_warehouses);
+      self.data.append("is_all_branches", self.user.is_all_branches);
       self.data.append("avatar", self.user.avatar);
 
        // append array assigned_warehouses
@@ -811,7 +811,7 @@ export default {
         statut: "",
         role_id: "",
         avatar: "",
-        is_all_warehouses:1,
+        is_all_branches:1,
       };
       this.data= new FormData();
       this.assigned_warehouses = [];

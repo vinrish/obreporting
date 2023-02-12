@@ -1,6 +1,6 @@
 <template>
   <div class="main-content">
-    <breadcumb :page="$t('All OB Reports')" :folder="$t('Ob Reports')"/>
+    <breadcumb :page="$t('INOVET OB REPORTING CENTER')" :folder="$t('Ob Reports')"/>
 
     <div v-if="isLoading" class="loading_page spinner spinner-primary mr-3"></div>
     <div v-else>
@@ -30,9 +30,9 @@
         }"
         :styleClass="showDropdown?'tableOne table-hover vgt-table full-height':'tableOne table-hover vgt-table non-height'"
       >
-        <div slot="selected-row-actions">
+        <!-- <div slot="selected-row-actions">
           <button class="btn btn-danger btn-sm" @click="delete_by_selected()">{{$t('Del')}}</button>
-        </div>
+        </div> -->
         <div slot="table-actions" class="mt-2 mb-3">
           <b-button variant="outline-info ripple m-1" size="sm" v-b-toggle.sidebar-right>
             <i class="i-Filter-2"></i>
@@ -41,19 +41,19 @@
           <b-button @click="Quotation_PDF()" size="sm" variant="outline-success ripple m-1">
             <i class="i-File-Copy"></i> PDF
           </b-button>
-          <vue-excel-xlsx
+          <!-- <vue-excel-xlsx
               class="btn btn-sm btn-outline-danger ripple m-1"
-              :data="quotations"
+              :data="obreports"
               :columns="columns"
-              :file-name="'quotations'"
+              :file-name="'obreports'"
               :file-type="'xlsx'"
-              :sheet-name="'quotations'"
+              :sheet-name="'obreports'"
               >
               <i class="i-File-Excel"></i> EXCEL
-          </vue-excel-xlsx>
+          </vue-excel-xlsx> -->
           <router-link
             class="btn-sm btn btn-primary ripple btn-icon m-1"
-            v-if="currentUserPermissions && currentUserPermissions.includes('Quotations_add')"
+            v-if="currentUserPermissions && currentUserPermissions.includes('OBReports_add')"
             to="/app/obreport/store"
           >
             <span class="ul-btn__icon">
@@ -109,10 +109,10 @@
                   {{$t('DownloadPdf')}}
                 </b-dropdown-item>
 
-                <b-dropdown-item title="Email" @click="QuoteEmail(props.row , props.row.id)">
+                <!-- <b-dropdown-item title="Email" @click="QuoteEmail(props.row , props.row.id)">
                   <i class="nav-icon i-Envelope-2 font-weight-bold mr-2"></i>
                   {{$t('Send OB Report on Email')}}
-                </b-dropdown-item>
+                </b-dropdown-item> -->
 
                 <!-- <b-dropdown-item
                   title="Delete"
@@ -320,13 +320,6 @@ export default {
           tdClass: "text-left",
           thClass: "text-left"
         },
-        // {
-        //   label: this.$t("Total"),
-        //   field: "GrandTotal",
-        //   type: "decimal",
-        //   tdClass: "text-left",
-        //   thClass: "text-left"
-        // },
         {
           label: this.$t("Action"),
           field: "actions",
@@ -427,7 +420,7 @@ export default {
         { title: "Occurence Subject", dataKey: "subject" },
         { title: "Occurence Detail", dataKey: "notes" }
       ];
-      pdf.autoTable(columns, self.quotations);
+      pdf.autoTable(columns, self.obreports);
       pdf.text("OBReport List", 40, 25);
       pdf.save("OBReport_List.pdf");
     },
@@ -522,8 +515,6 @@ export default {
             this.Filter_client +
             "&statut=" +
             this.Filter_status +
-            // "&warehouse_id=" +
-            // this.Filter_warehouse +
             "&date=" +
             this.Filter_date +
             "&SortField=" +
@@ -536,9 +527,7 @@ export default {
             this.limit
         )
         .then(response => {
-          this.quotations = response.data.obreports;
-        //   this.customers = response.data.customers;
-        //   this.warehouses = response.data.warehouses;
+          this.obreports = response.data.obreports;
           this.totalRows = response.data.totalRows;
 
           // Complete the animation of theprogress bar.

@@ -729,7 +729,7 @@
                                 <span class="checkmark"></span>
                               </label>
                             </b-col>
-                            
+
                           </b-row>
                         </b-card-text>
                       </b-card-body>
@@ -817,7 +817,7 @@
                   </b-card>
                 </b-col>
 
-                <!-- Quotations -->
+                <!-- OBReports -->
                 <b-col md="4">
                   <b-card no-body class="ul-card__border-radius">
                     <b-card-header header-tag="header" class="p-1" role="tab">
@@ -827,7 +827,7 @@
                         href="#"
                         v-b-toggle.panel-Quotations
                         variant="transparent"
-                      >{{$t('Quotations')}}</b-button>
+                      >{{$t('OBReports')}}</b-button>
                     </b-card-header>
                     <b-collapse
                       id="panel-Quotations"
@@ -838,53 +838,53 @@
                       <b-card-body>
                         <b-card-text>
                           <b-row>
-                            <!--Quotations View -->
+                            <!--OBReports View -->
                             <b-col md="6">
                               <label class="checkbox checkbox-outline-primary">
                                 <input
                                   type="checkbox"
                                   checked
                                   v-model="permissions"
-                                  value="Quotations_view"
+                                  value="OBReports_view"
                                 >
                                 <span>{{$t('View')}}</span>
                                 <span class="checkmark"></span>
                               </label>
                             </b-col>
-                            <!--Quotations ADD -->
+                            <!--OBReports ADD -->
                             <b-col md="6">
                               <label class="checkbox checkbox-outline-primary">
                                 <input
                                   type="checkbox"
                                   checked
                                   v-model="permissions"
-                                  value="Quotations_add"
+                                  value="OBReports_add"
                                 >
                                 <span>{{$t('Add')}}</span>
                                 <span class="checkmark"></span>
                               </label>
                             </b-col>
-                            <!--Quotations Edit -->
+                            <!--OBReports Edit -->
                             <b-col md="6">
                               <label class="checkbox checkbox-outline-primary">
                                 <input
                                   type="checkbox"
                                   checked
                                   v-model="permissions"
-                                  value="Quotations_edit"
+                                  value="OBReports_edit"
                                 >
                                 <span>{{$t('Edit')}}</span>
                                 <span class="checkmark"></span>
                               </label>
                             </b-col>
-                            <!--Quotations Delete -->
+                            <!--OBReports Delete -->
                             <b-col md="6">
                               <label class="checkbox checkbox-outline-primary">
                                 <input
                                   type="checkbox"
                                   checked
                                   v-model="permissions"
-                                  value="Quotations_delete"
+                                  value="OBReports_delete"
                                 >
                                 <span>{{$t('Del')}}</span>
                                 <span class="checkmark"></span>
@@ -1412,7 +1412,7 @@
                                 <span class="checkmark"></span>
                               </label>
                             </b-col>
-                            
+
                           </b-row>
                         </b-card-text>
                       </b-card-body>
@@ -1944,7 +1944,7 @@
                                 <span class="checkmark"></span>
                               </label>
                             </b-col>
-                          
+
                           </b-row>
                         </b-card-text>
                       </b-card-body>
@@ -2043,7 +2043,7 @@
                               </label>
                             </b-col>
 
-                          
+
                             <!--Currency  -->
                             <b-col md="6">
                               <label class="checkbox checkbox-outline-primary">
@@ -2070,7 +2070,7 @@
                                 <span class="checkmark"></span>
                               </label>
                             </b-col>
-                           
+
                             <!--Backup-->
                             <b-col md="6">
                               <label class="checkbox checkbox-outline-primary">

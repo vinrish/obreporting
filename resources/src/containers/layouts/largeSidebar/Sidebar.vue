@@ -14,6 +14,10 @@
       <div>
         <ul class="navigation-left">
             <li
+            v-show="currentUserPermissions && (currentUserPermissions.includes('OBReports_view')
+                        ||currentUserPermissions.includes('OBReports_add')
+                        ||currentUserPermissions.includes('OBReports_edit')
+                        ||currentUserPermissions.includes('OBReports_delete'))"
             @mouseenter="toggleSubMenu"
             :class="{ active: selectedParentMenu == 'obreport' }"
             class="nav-item"
@@ -84,7 +88,7 @@
         >
           <li
             class="nav-item"
-            v-if="currentUserPermissions && currentUserPermissions.includes('Quotations_add')"
+            v-if="currentUserPermissions && currentUserPermissions.includes('OBReports_add')"
           >
             <router-link tag="a" class to="/app/obreport/store">
               <i class="nav-icon i-Add-File"></i>
@@ -93,7 +97,7 @@
           </li>
           <li
             class="nav-item"
-            v-if="currentUserPermissions && currentUserPermissions.includes('Quotations_view')"
+            v-if="currentUserPermissions && currentUserPermissions.includes('OBReports_view')"
           >
             <router-link tag="a" class to="/app/obreport/list">
               <i class="nav-icon i-Files"></i>

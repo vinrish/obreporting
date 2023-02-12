@@ -7,7 +7,7 @@ use App\Models\Setting;
 use App\Models\User;
 use App\Models\role_user;
 use App\Models\Branch;
-use App\Models\UserBranch;
+use App\Models\BranchUser;
 use App\utils\helpers;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
@@ -180,7 +180,7 @@ class UserController extends BaseController
     {
         $this->authorizeForUser($request->user('api'), 'update', User::class);
 
-        $assigned_branches = UserBranch::where('user_id', $id)->pluck('branch_id')->toArray();
+        $assigned_branches = BranchUser::where('user_id', $id)->pluck('branch_id')->toArray();
         $branches = Branch::where('deleted_at', '=', null)->whereIn('id', $assigned_branches)->pluck('id')->toArray();
 
         return response()->json([

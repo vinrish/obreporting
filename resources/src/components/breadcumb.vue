@@ -3,10 +3,10 @@
        <div class="breadcrumb">
             <slot name="header">
                <h1>{{page}}</h1>
-                    <ul>
+                    <!-- <ul>
                         <li><a href=""> {{folder}} </a></li>
                         <li> {{page}} </li>
-                    </ul>
+                    </ul> -->
             </slot>
         </div>
         <div class="separator-breadcrumb border-top"></div>
@@ -15,6 +15,6 @@
 <script>
 export default {
     props:['page','folder'],
-   
+
 }
 </script>

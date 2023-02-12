@@ -38,9 +38,7 @@ Route::middleware(['auth:api', 'Is_Active'])->group(function () {
     //------------------------------- ObReports --------------------------\\
     //------------------------------------------------------------------\\
     Route::resource('obreports', 'ObReportsController');
-    // Route::post('quotations_send_email', 'QuotationsController@SendEmail');
-    // Route::post('quotations_send_sms', 'QuotationsController@Send_SMS');
-    Route::post('obreportss_delete_by_selection', 'ObReportsController@delete_by_selection');
+    // Route::get('quote_pdf/{id}', 'ObReportsController@ObReport_pdf');
 
     //------------------------------- Users --------------------------\\
     //------------------------------------------------------------------\\
@@ -87,4 +85,4 @@ Route::middleware(['auth:api', 'Is_Active'])->group(function () {
 
 //-------------------------------  Print & PDF ------------------------\\
 //------------------------------------------------------------------\\
-Route::get('ob_pdf/{id}', 'ObReportsController@ObReport_pdf');
+Route::get('quote_pdf/{id}', 'ObReportsController@ObReport_pdf');

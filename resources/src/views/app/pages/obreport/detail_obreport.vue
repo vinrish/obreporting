@@ -24,14 +24,14 @@
             <i class="i-Add"></i>
             <span>{{$t('CreateSale')}}</span>
           </router-link> -->
-          <button @click="Quote_Email()" class="btn-sm btn btn-info ripple btn-icon m-1">
+          <!-- <button @click="Quote_Email()" class="btn-sm btn btn-info ripple btn-icon m-1">
             <i class="i-Envelope-2"></i>
             {{$t('Email')}}
           </button>
           <button @click="Quote_SMS()" class="btn btn-secondary btn-icon ripple btn-sm">
             <i class="i-Speach-Bubble"></i>
             SMS
-          </button>
+          </button> -->
           <button @click="Quote_PDF()" class="btn-sm btn btn-light ripple btn-icon m-1">
             <i class="i-File-TXT"></i> PDF
           </button>
@@ -57,101 +57,27 @@
           <hr>
           <b-row class="mt-5">
             <b-col md="4" class="mb-4">
-              <h5 class="font-weight-bold">{{$t('Client_Info')}}</h5>
-              <div>{{quote.client_name}}</div>
-              <!-- <div>{{quote.client_email}}</div>
-              <div>{{quote.client_phone}}</div>
-              <div>{{quote.client_adr}}</div> -->
+              <h5 class="font-weight-bold">{{$t('Client Info')}}</h5>
+              <div>{{$t('Client Name')}} : {{quote.client_name}}</div>
+              <div>{{$t('Reported Branch')}} : {{quote.branch}}</div>
             </b-col>
             <b-col md="4" class="mb-4">
-              <h5 class="font-weight-bold">{{$t('Company_Info')}}</h5>
-              <div>{{company.CompanyName}}</div>
-              <div>{{company.email}}</div>
-              <div>{{company.CompanyPhone}}</div>
-              <div>{{company.CompanyAdress}}</div>
+              <h5 class="font-weight-bold">{{$t('Report Info')}}</h5>
+              <div>{{$t('Reference No.')}} : {{quote.Ref}}</div>
+              <div>{{$t('Occurence Subject')}} : {{quote.subject}}</div>
+              <div>{{$t('(Client) Personel Involved')}} : {{quote.client_personel}}</div>
+              <div>{{$t('(Inovet) Personel Involved')}} : {{quote.personel}}</div>
+              <div>{{$t('Escalated To')}} : {{quote.escalate}}</div>
             </b-col>
             <b-col md="4" class="mb-4">
               <h5 class="font-weight-bold">{{$t('Reporter Info')}}</h5>
-              <!-- <div>{{$t('Reference')}} : {{quote.Ref}}</div> -->
-              <div>{{$t('Occurence Subject')}} : {{quote.subject}}</div>
-              <div>{{quote.reporter_name}}</div>
-              <div>{{quote.reporter_id}}</div>
-              <div>{{quote.phone}}</div>
-              <!-- <div>{{company.CompanyAdress}}</div> -->
-              <!-- <div>
-                {{$t('Status')}} :
-                <span
-                  v-if="quote.statut == 'sent'"
-                  class="badge badge-outline-success"
-                >{{$t('Sent')}}</span>
-                <span v-else class="badge badge-outline-warning">{{$t('Pending')}}</span>
-              </div> -->
+              <div>{{$t('Reporter Name')}} : {{quote.reporter_name}}</div>
+              <div>{{$t('Reporter ID')}} : {{quote.reporter_id}}</div>
+              <div>{{$t('Reporter Cell No')}} : {{quote.phone}}</div>
               <div>{{$t('date')}} : {{quote.date}}</div>
-              <!-- <div>{{$t('warehouse')}} : {{quote.warehouse}}</div> -->
             </b-col>
           </b-row>
           <b-row class="mt-3">
-            <!-- <b-col md="12">
-              <h5 class="font-weight-bold">{{$t('Order_Summary')}}</h5>
-              <div class="table-responsive">
-                <table class="table table-hover table-md">
-                  <thead class="bg-gray-300">
-                    <tr>
-                      <th scope="col">{{$t('ProductName')}}</th>
-                      <th scope="col">{{$t('Net_Unit_Price')}}</th>
-                      <th scope="col">{{$t('Quantity')}}</th>
-                      <th scope="col">{{$t('UnitPrice')}}</th>
-                      <th scope="col">{{$t('Discount')}}</th>
-                      <th scope="col">{{$t('Tax')}}</th>
-                      <th scope="col">{{$t('SubTotal')}}</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr v-for="detail in details">
-                      <td><span>{{detail.code}} ({{detail.name}})</span>
-                        <p v-show="detail.is_imei && detail.imei_number !==null ">{{$t('IMEI_SN')}} : {{detail.imei_number}}</p>
-                      </td>
-                      <td>{{currentUser.currency}} {{formatNumber(detail.Net_price,3)}}</td>
-                      <td>{{formatNumber(detail.quantity,2)}} {{detail.unit_sale}}</td>
-                      <td>{{currentUser.currency}} {{formatNumber(detail.price,2)}}</td>
-                      <td>{{currentUser.currency}} {{formatNumber(detail.DiscountNet,2)}}</td>
-                      <td>{{currentUser.currency}} {{formatNumber(detail.taxe,2)}}</td>
-                      <td>{{currentUser.currency}} {{detail.total.toFixed(2)}}</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </b-col> -->
-            <!-- <div class="offset-md-9 col-md-3 mt-4">
-              <table class="table table-striped table-sm">
-                <tbody>
-                  <tr>
-                    <td class="bold">{{$t('OrderTax')}}</td>
-                    <td>
-                      <span>{{currentUser.currency}} {{quote.TaxNet.toFixed(2)}} ({{formatNumber(quote.tax_rate ,2)}} %)</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="bold">{{$t('Discount')}}</td>
-                    <td>{{currentUser.currency}} {{quote.discount.toFixed(2)}}</td>
-                  </tr>
-                  <tr>
-                    <td class="bold">{{$t('Shipping')}}</td>
-                    <td>{{currentUser.currency}} {{quote.shipping.toFixed(2)}}</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <span class="font-weight-bold">{{$t('Total')}}</span>
-                    </td>
-                    <td>
-                      <span
-                        class="font-weight-bold"
-                      >{{currentUser.currency}} {{quote.GrandTotal}}</span>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div> -->
           </b-row>
 
            <hr v-show="quote.note">
@@ -182,8 +108,6 @@ export default {
     return {
       isLoading: true,
       quote: {},
-    //   details: [],
-    //   variants: [],
       company: {},
       email: {
         to: "",
@@ -249,7 +173,7 @@ export default {
     Get_Details() {
       let id = this.$route.params.id;
       axios
-        .get(`quotations/${id}`)
+        .get(`obreports/${id}`)
         .then(response => {
           this.quote = response.data.quote;
         //   this.details = response.data.details;

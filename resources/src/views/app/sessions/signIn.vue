@@ -16,7 +16,7 @@
                     :rules="{ required: true}"
                     v-slot="validationContext"
                   >
-                    <b-form-group :label="$t('Email_Address')" class="text-12">
+                    <b-form-group :label="$t('Username')" class="text-12">
                       <b-form-input
                         :state="getValidationState(validationContext)"
                         aria-describedby="Email-feedback"
@@ -75,6 +75,9 @@
                 onclick="location.href='/register'"
           >{{$t('Not Registered? Create Account')}}
           </b-button>
+          <h5 class="mt-1 text-center text-dark"><strong>Developed By: VINRISHTECHNOLOGIES</strong></h5>
+          <h5 class="text-center text-dark"><strong>Email: vinrishtechnologies@gmail.com</strong></h5>
+          <h5 class="text-center text-dark"><strong>TEL: 0791925895</strong></h5>
           </div>
         </div>
       </div>

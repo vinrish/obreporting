@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ObReport extends Model
 {
+    // protected $table ="ob_reports";
     protected $dates = ['deleted_at'];
 
     protected $fillable = [
@@ -22,8 +23,6 @@ class ObReport extends Model
         'branch',
         'escalate',
         'notes',
-        // 'client_phone',
-        // 'staff_no',
         'created_at',
         'updated_at',
         'deleted_at',

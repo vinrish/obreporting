@@ -1,7 +1,7 @@
 import BootstrapVue from 'bootstrap-vue/dist/bootstrap-vue.esm';
 import VueGoodTablePlugin from "vue-good-table";
 import Meta from "vue-meta";
-import "./../assets/styles/sass/themes/lite-purple.scss";
+import "./../assets/styles/sass/themes/lite-blue.scss";
 import "./sweetalert2.js";
 import VueHtmlToPaper from 'vue-html-to-paper';
 const options = {

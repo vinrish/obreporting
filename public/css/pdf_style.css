@@ -129,6 +129,7 @@ h2.name {
 }
 
 #invoice>table th {
+    text-align: left;
 	padding: 6px;
 	border-bottom: 1px solid #FFFFFF;
 	background: rgb(13, 79, 202);
@@ -151,6 +152,7 @@ h2.name {
 }
 
 #client>table th {
+    text-align: left;
 	padding: 6px;
 	background: rgb(13, 79, 202);
 	color: #fff;
@@ -196,6 +198,7 @@ h2.name {
 }
 
 #invoice {
+    text-align: left;
 	margin-right: 0px;
 	width: 40%;
 	float: right;
@@ -232,12 +235,12 @@ h2.name {
 #details_inv>table td {
 	padding: 6px;
 	background: #EEEEEE;
-	text-align: center;
+	text-align: left;
 }
 
 #details_inv>table th {
 	padding: 6px;
-	text-align: center;
+	text-align: left;
 	border-bottom: 1px solid #FFFFFF;
 	color: #fff;
 	background: rgb(13, 79, 202);
@@ -247,7 +250,7 @@ h2.name {
 }
 
 #details_inv>table td {
-	text-align: center;
+	text-align: left;
 }
 
 #details_inv>table td h3 {

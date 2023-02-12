@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Setting;
 use App\Models\User;
 use App\Models\Branch;
-use App\Models\UserBranch;
+use App\Models\BranchUser;
 use App\Models\sms_gateway;
 use File;
 use Illuminate\Support\Facades\Artisan;
@@ -220,7 +220,7 @@ class SettingsController extends Controller
             if($user_auth->is_all_branches){
                 $branches = Branch::where('deleted_at', '=', null)->get(['id', 'name']);
             }else{
-                $branches_id = UserBranch::where('user_id', $user_auth->id)->pluck('branch_id')->toArray();
+                $branches_id = BranchUser::where('user_id', $user_auth->id)->pluck('branch_id')->toArray();
                 $branches = Branch::where('deleted_at', '=', null)->whereIn('id', $branches_id)->get(['id', 'name']);
             }
 

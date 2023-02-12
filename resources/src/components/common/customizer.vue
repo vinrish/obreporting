@@ -28,7 +28,7 @@
 
         <div class>
           <div class="card-header">
-            <p class="mb-0">Dark Mode</p>
+            <p class="mb-0">Light Mode</p>
           </div>
 
           <div class="card-body">
@@ -112,7 +112,7 @@
                 <i title="sa" class="flag-icon flag-icon-squared flag-icon-kr"></i>
                 <span class="title-lang">Korean</span>
               </a>
-           
+
               <a @click="SetLocal('ba')">
                 <i title="sa" class="flag-icon flag-icon-squared flag-icon-bd"></i>
                 <span class="title-lang">Bangla</span>
@@ -122,7 +122,7 @@
                 <i title="pt" class="flag-icon flag-icon-squared flag-icon-pt"></i>
                 <span class="title-lang">Portuguese</span>
               </a>
-            
+
             </div>
           </div>
         </div>
@@ -157,7 +157,7 @@ export default {
         "ba",
         "br",
       ],
-      
+
     };
   },
 
@@ -178,7 +178,7 @@ export default {
       this.$store.dispatch("language/setLanguage", locale);
       Fire.$emit("ChangeLanguage");
     },
-   
+
   },
 };
 </script>

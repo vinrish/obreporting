@@ -16,15 +16,14 @@ class CreateObReportsTable extends Migration
         Schema::create('ob_reports', function (Blueprint $table) {
             $table->engine = 'InnoDB';
 			$table->integer('id', true);
-			// $table->integer('user_id')->index('user_id_ob_report');
 			$table->date('date');
 			$table->string('Ref', 192);
 			$table->string('client_name');
             $table->string('client_personel', 192);
-            $table->string('client_phone', 192);
 			$table->string('reporter_name');
             $table->string('branch');
-            $table->integer('reporter_id')->index('reporter_id_ob_report');
+            $table->string('escalate');
+            $table->string('reporter_id', 192);
             $table->string('personel');
 			$table->string('subject');
             $table->string('phone', 192);
